@@ -38,7 +38,7 @@ def optionBanner():
     time.sleep(0.2)
     print('\t{0}[{1}3{2}]{3} Reverse Pyc -> Py').format(YELLOW, RED, YELLOW, WHITE)
     time.sleep(0.2)
-    print('\n\t{0}[{1}Q{2}]{3} Quit\n').format(YELLOW, RED, YELLOW, WHITE)
+    print('\n\t{0}[{1}Q{2}]{3} Quit    {0}[{1}U{2}]{3} Update \n').format(YELLOW, RED, YELLOW, WHITE)
 
 def exe2pyc():
     s = raw_input("Type the path of your exe: ")
@@ -107,6 +107,10 @@ def exe2py():
     sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + str(new) + '.py')
     os.popen('rm -Rf single.py.pyc')
     print ' '
+    sys.exit(0)
+
+def updater():
+    os.system('python2.7 updater.py')
     sys.exit(0)
 
 def pp():
@@ -232,6 +236,10 @@ def main():
                 exe2pyc()
             elif choice == '3':
                 pyc2py()
+	    elif choice == 'U':
+		updater()		
+	    elif choice == 'u':
+		updater()
             else:
 	 	clear()
 		print 'Invalid Option'
