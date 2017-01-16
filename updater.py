@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+# -.- coding: utf-8 -.-
+# Coded by: Alisson Moretto - 4w4k3 - 4w4k3@protonmail.com                        
+# view more: https://github.com/4w4k3/rePy2exe
+
 import urllib2
 import os
 import time
@@ -23,6 +28,8 @@ def master():
 	fileup = open("unpy2exe.py", 'w')
 	fileup.write(data)
 	fileup.close()
+	
+	os.system('rm -Rf version.txt')
 
 def one():
 	response = urllib2.urlopen('https://raw.githubusercontent.com/4w4k3/rePy2exe/master/version.txt')
@@ -40,7 +47,7 @@ def two():
 	xd = version.read()
 	if xd2 != xd:
     	    down()
-       	    os.popen('rm -Rf version2.txt')
+       	    os.popen('mv version2.txt version.txt')
 	    choice = raw_input('You want update it ? (y/n) ')
 	    if choice == 'Y':
 	   	    os.popen('rm -Rf rePy2exe.py')
