@@ -70,5 +70,5 @@ def two():
 	    print "Already Updated"
 	    os.popen('rm -Rf version2.txt')
 	    time.sleep(2)
-	    os.system('python2.7 rePy2exe')
+	    os.system('python2.7 rePy2exe.py')
 two()
