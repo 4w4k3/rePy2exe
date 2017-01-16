@@ -45,6 +45,8 @@ def two():
 	print updatechk.read()
 	version = open('version.txt', 'r')
 	xd = version.read()
+	version.close()
+	updatechk.close()
 	if xd2 != xd:
     	    down()
        	    os.popen('mv version2.txt version.txt')
