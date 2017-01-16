@@ -5,7 +5,6 @@
 
 
 import time, os, sys, logging, math
-import subprocess
 
 def clear():
 	os.system('clear')
