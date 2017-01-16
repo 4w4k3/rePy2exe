@@ -58,7 +58,10 @@ def two():
    		    os.system('python2.7 rePy2exe.py')
 	    else:
 		print "Ok"
+		os.system('python2.7 rePy2exe.py')
 	else:
 	    print "Already Updated"
 	    os.popen('rm -Rf version2.txt')
+	    time.sleep(2)
+	    os.system('python2.7 rePy2exe')
 two()
