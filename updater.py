@@ -29,7 +29,11 @@ def master():
 	fileup.write(data)
 	fileup.close()
 	
-	os.system('rm -Rf version.txt')
+	response = urllib2.urlopen('https://raw.githubusercontent.com/4w4k3/rePy2exe/master/version.txt')
+	data = response.read()
+	fileup = open("version.txt", 'w')
+	fileup.write(data)
+	fileup.close()
 
 def one():
 	response = urllib2.urlopen('https://raw.githubusercontent.com/4w4k3/rePy2exe/master/version.txt')
@@ -49,11 +53,12 @@ def two():
 	updatechk.close()
 	if xd2 != xd:
     	    down()
-       	    os.popen('mv version2.txt version.txt')
+       	    os.popen('rm -Rf version2.txt')
 	    choice = raw_input('You want update it ? (y/n) ')
 	    if choice == 'Y':
 	   	    os.popen('rm -Rf rePy2exe.py')
     	   	    os.popen('rm -Rf unpy2exe.py')
+       	    	    os.popen('rm -Rf version.txt')
 		    master()
 	            print "UPDATED"
    		    time.sleep(2)
@@ -61,6 +66,7 @@ def two():
 	    elif choice == 'y':
 	   	    os.popen('rm -Rf rePy2exe.py')
     	   	    os.popen('rm -Rf unpy2exe.py')
+		    os.popen('rm -Rf version.txt')
 		    master()
     	            print "UPDATED"
 		    time.sleep(2)
