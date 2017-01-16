@@ -62,7 +62,7 @@ def two():
 		    master()
 	            print "UPDATED"
    		    time.sleep(2)
-		    os.system('python2.7 rePy2exe')
+		    os.system('python2.7 rePy2exe.py')
 	    elif choice == 'y':
 	   	    os.popen('rm -Rf rePy2exe.py')
     	   	    os.popen('rm -Rf unpy2exe.py')
