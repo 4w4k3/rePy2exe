@@ -27,7 +27,7 @@ def heading():
     '\n' + 'by: {0}Alisson Moretto ({1}4w4k3{2})'.format(
         YELLOW, RED, YELLOW, BLUE).center(140) + 
     '\n' + '{0}4w4k3@protonmail.com'.format(
-        BLUE).center(140) + '\n' + 'Version: {0}0.2{1}\n'.format(YELLOW, END).center(145))
+        BLUE).center(140) + '\n' + 'Version: {0}0.3{1}\n'.format(YELLOW, END).center(145))
 
 def optionBanner():
     print('\nChoose option from menu:\n')
@@ -42,73 +42,109 @@ def optionBanner():
 
 def exe2pyc():
     s = raw_input("Type the path of your exe: ")
-    os.popen('python unpy2exe.py ' + s)
-    c = str(s.split('.exe')[0])
-    d = '.py.pyc' 
-    z = c + d
-    os.popen('mv single.py.pyc ' + z)
-    cwd = str(os.getcwd())
-    clear()
-    heading()
-    print ' '
-    print 'Processing the EXEcutable...'
-    sys.stdout.write(YELLOW + ' [*] Working : ' + END + cwd + '/' + str(s))
-    print ' '
-    time.sleep(5)
-    clear()
-    heading()
-    print ' '
-    print 'Everything is OK!'
-    sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + c + '.py.pyc')
-    print ' ' 
-    sys.exit(0)
+    ff = str(s)
+    check = os.path.isfile(ff)
+    if check == True:
+        os.popen('python unpy2exe.py ' + s)
+        c = str(s.split('.exe')[0])
+        d = '.py.pyc' 
+        z = c + d
+        os.popen('mv single.py.pyc ' + z)
+        cwd = str(os.getcwd())
+        clear()
+        heading()
+        print ' '
+        print 'Processing the EXEcutable...'
+        sys.stdout.write(YELLOW + ' [*] Working : ' + END + cwd + '/' + str(s))
+        print ' '
+        time.sleep(5)
+        clear()
+        heading()
+        print ' '
+        print 'Everything is OK!'
+        sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + c + '.py.pyc')
+        print ' ' 
+        sys.exit(0)
+    else:
+        print ' '
+        sys.stdout.write(RED + ' [!] File not found : ' + END + str(s))
+        print ' '
+        print ' '
+        enter = raw_input("Press any key to return ")
+        clear()
+        heading()
+        print ' '
 
 def pyc2py():
     cwd = str(os.getcwd())
     s = raw_input("Type the path of your .pyc: ")
-    new = raw_input("Type a name to save your .py: ")
-    clear()
-    heading()
-    print ' '
-    sys.stdout.write(YELLOW + ' [*] Working : ' + END + str(s))
-    os.popen('./pycdc/pycdc ' + s + ' >> ' + new + '.py')
-    print ' '
-    time.sleep(3)
-    clear()
-    heading()
-    print ' '
-    print 'Everything is OK!'
-    sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + str(new) + '.py')
-    print ' ' 
-    sys.exit(0)
+    ff = str(s)
+    check = os.path.isfile(ff)
+    if check == True:
+        new = raw_input("Type a name to save your .py: ")
+        clear()
+        heading()
+        print ' '
+        sys.stdout.write(YELLOW + ' [*] Working : ' + END + str(s))
+        os.popen('./pycdc/pycdc ' + s + ' >> ' + new + '.py')
+        print ' '
+        time.sleep(3)
+        clear()
+        heading()
+        print ' '
+        print 'Everything is OK!'
+        sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + str(new) + '.py')
+        print ' ' 
+        sys.exit(0)
+    else:
+        print ' '
+        sys.stdout.write(RED + ' [!] File not found : ' + END + str(s))
+        print ' '
+        print ' '
+        enter = raw_input("Press any key to return ")
+        clear()
+        heading()
+        print ' '
 
 def exe2py():
     cwd = str(os.getcwd())
     s = raw_input("Type the path of your .exe: ")
-    clear()
-    heading()
-    print ' '
-    os.popen('python unpy2exe.py ' + s)
-    clear()
-    heading()
-    print ' '
-    new = raw_input("Type a name to save your .py: ")
-    os.popen('./pycdc/pycdc ' + 'single.py.pyc' + ' >> ' + new + '.py')
-    clear()
-    heading()
-    print ' '
-    sys.stdout.write(YELLOW + ' [*] Working : ' + END + str(s))
-    print ' '
-    time.sleep(3)
-    clear()
-    heading()
-    print ' '
-    print 'Everything is OK!'
-    sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + str(new) + '.py')
-    os.popen('rm -Rf single.py.pyc')
-    print ' '
-    sys.exit(0)
-
+    ff = str(s)
+    check = os.path.isfile(ff)
+    if check == True:
+        clear()
+        heading()
+        print ' '
+        os.popen('python unpy2exe.py ' + s)
+        clear()
+        heading()
+        print ' '
+        new = raw_input("Type a name to save your .py: ")
+        os.popen('./pycdc/pycdc ' + 'single.py.pyc' + ' >> ' + new + '.py')
+        clear()
+        heading()
+        print ' '
+        sys.stdout.write(YELLOW + ' [*] Working : ' + END + str(s))
+        print ' '
+        time.sleep(3)
+        clear()
+        heading()
+        print ' '
+        print 'Everything is OK!'
+        sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + str(new) + '.py')
+        os.popen('rm -Rf single.py.pyc')
+        print ' '
+        sys.exit(0)
+    else:
+        print ' '
+        sys.stdout.write(RED + ' [!] File not found : ' + END + str(s))
+        print ' '
+        print ' '
+        enter = raw_input("Press any key to return ")
+        clear()
+        heading()
+        print ' '
+        
 def updater():
     os.system('python2.7 updater.py')
     sys.exit(0)
