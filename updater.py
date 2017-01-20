@@ -3,9 +3,33 @@
 # Coded by: Alisson Moretto - 4w4k3 - 4w4k3@protonmail.com                        
 # view more: https://github.com/4w4k3/rePy2exe
 
+import sys, logging, math
 import urllib2
 import os
 import time
+
+BLUE, RED, WHITE, YELLOW, MAGENTA, GREEN, END = '\33[94m', '\033[91m', '\33[97m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m'
+
+
+def clear():
+    os.system('clear')
+
+def heading():
+    sys.stdout.write(GREEN + """
+ _  .-')    ('-.     _ (`-.                      ('-.  ) (`-.        ('-.   
+( \( -O ) _(  OO)   ( (OO  )                   _(  OO)  ( OO ).    _(  OO)  
+ ,------.(,------. _.`     \ ,--.   ,--.-----.(,------.(_/.  \_)-.(,------. 
+ |   /`. '|  .---'(__...--''  \  `.'  / ,-.   \|  .---' \  `.'  /  |  .---' 
+ |  /  | ||  |     |  /  | |.-')     /'-'  |  ||  |      \     /\  |  |     
+ |  |_.' (|  '--.  |  |_.' (OO  \   /    .'  /(|  '--.    \   \ | (|  '--.  
+ |  .  '.'|  .--'  |  .___.'|   /  /\_ .'  /__ |  .--'   .'    \_) |  .--'  
+ |  |\  \ |  `---. |  |     `-./  /.__)       ||  `---. /  .'.  \  |  `---. 
+ `--' '--'`------' `--'       `--'    `-------'`------''--'   '--' `------'  """ + END + BLUE +
+    '\n' + '{1}R{0}everse {1}E{0}ngineering {1}Py2Exe{2}{3}'.format(YELLOW, RED, YELLOW, BLUE).center(90) +
+    '\n' + 'by: {0}Alisson Moretto ({1}4w4k3{2})'.format(
+        YELLOW, RED, YELLOW, BLUE).center(140) + 
+    '\n' + '{0}4w4k3@protonmail.com'.format(
+        BLUE).center(140) + '\n' + 'Version: {0}0.2{1}\n'.format(YELLOW, END).center(145))
 
 def down():
     os.system('clear')
@@ -60,23 +84,35 @@ def two():
     	   	    os.popen('rm -Rf unpy2exe.py')
        	    	    os.popen('rm -Rf version.txt')
 		    master()
-	            print "UPDATED"
+                    clear()
+                    heading()
+                    print ' '
+                    sys.stdout.write(GREEN + ' [*] Update Version to : ' + END + str(xd2))
    		    time.sleep(2)
+                    print ' '
+                    raw_input('Press any key to return: ')
 		    os.system('python2.7 rePy2exe.py')
 	    elif choice == 'y':
 	   	    os.popen('rm -Rf rePy2exe.py')
     	   	    os.popen('rm -Rf unpy2exe.py')
 		    os.popen('rm -Rf version.txt')
 		    master()
-    	            print "UPDATED"
-		    time.sleep(2)
-   		    os.system('python2.7 rePy2exe.py')
+                    clear()
+                    heading()
+                    print ' '
+                    sys.stdout.write(GREEN + ' [*] Update Version to : ' + END + str(xd2))
+   		    time.sleep(2)
+                    print ' '
+                    raw_input('Press any key to return: ')
+		    os.system('python2.7 rePy2exe.py')
+		    
 	    else:
 		print "Ok"
 		os.system('python2.7 rePy2exe.py')
 	else:
-	    print "Already Updated"
+            sys.stdout.write(GREEN + ' [*] You have latest Version : ' + END + str(xd2))
+            print ' '
 	    os.popen('rm -Rf version2.txt')
-	    time.sleep(2)
+            raw_input('Press any key to return: ')
 	    os.system('python2.7 rePy2exe.py')
 two()
