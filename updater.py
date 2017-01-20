@@ -29,15 +29,15 @@ def heading():
     '\n' + 'by: {0}Alisson Moretto ({1}4w4k3{2})'.format(
         YELLOW, RED, YELLOW, BLUE).center(140) + 
     '\n' + '{0}4w4k3@protonmail.com'.format(
-        BLUE).center(140) + '\n' + 'Version: {0}0.2{1}\n'.format(YELLOW, END).center(145))
+        BLUE).center(140) + END)
 
 def down():
-    os.system('clear')
-    print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-    print ' [*] Checking Updates...'
-    print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-    print '                              '
-    print "Update Found"
+    clear()
+    heading()
+    print ' '
+    sys.stdout.write(' [*] Checking Updates : ' + YELLOW + ' Update Found' + END)
+    print ' '
+    print ' '
 
 
 def master():
@@ -90,7 +90,7 @@ def two():
                     sys.stdout.write(GREEN + ' [*] Updated Version to : ' + END + str(xd2))
    		    time.sleep(2)
                     print ' '
-                    raw_input('Press any key to return: ')
+                    raw_input('Press any key to return. ')
 		    os.system('python2.7 rePy2exe.py')
 	    elif choice == 'y':
 	   	    os.popen('rm -Rf rePy2exe.py')
@@ -103,7 +103,7 @@ def two():
                     sys.stdout.write(GREEN + ' [*] Updated Version to : ' + END + str(xd2))
    		    time.sleep(2)
                     print ' '
-                    raw_input('Press any key to return: ')
+                    raw_input('Press any key to return. ')
 		    os.system('python2.7 rePy2exe.py')
 		    
 	    else:
