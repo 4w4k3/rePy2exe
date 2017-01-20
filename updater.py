@@ -87,7 +87,7 @@ def two():
                     clear()
                     heading()
                     print ' '
-                    sys.stdout.write(GREEN + ' [*] Update Version to : ' + END + str(xd2))
+                    sys.stdout.write(GREEN + ' [*] Updated Version to : ' + END + str(xd2))
    		    time.sleep(2)
                     print ' '
                     raw_input('Press any key to return: ')
@@ -95,12 +95,12 @@ def two():
 	    elif choice == 'y':
 	   	    os.popen('rm -Rf rePy2exe.py')
     	   	    os.popen('rm -Rf unpy2exe.py')
-		    os.popen('rm -Rf version.txt')
+       	    	    os.popen('rm -Rf version.txt')
 		    master()
                     clear()
                     heading()
                     print ' '
-                    sys.stdout.write(GREEN + ' [*] Update Version to : ' + END + str(xd2))
+                    sys.stdout.write(GREEN + ' [*] Updated Version to : ' + END + str(xd2))
    		    time.sleep(2)
                     print ' '
                     raw_input('Press any key to return: ')
