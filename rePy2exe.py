@@ -4,7 +4,7 @@
 # view more: https://github.com/4w4k3/rePy2exe
 
 
-import time, os, sys, logging, math
+import time, os, sys
 
 def clear():
 	os.system('clear')
