@@ -3,7 +3,7 @@
 # Coded by: Alisson Moretto - 4w4k3 - 4w4k3@protonmail.com                        
 # view more: https://github.com/4w4k3/rePy2exe
 
-import sys, logging, math
+import sys
 import urllib2
 import os
 import time
