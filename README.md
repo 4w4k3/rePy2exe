@@ -5,6 +5,7 @@ Reverse Engineering Tool for py2exe applications.
 
 ### Prerequisites
 
+* Linux
 * cmake
 * git
 * python2.7
