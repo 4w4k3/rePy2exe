@@ -147,7 +147,6 @@ def exe2py():
         
 def updater():
     os.system('python2.7 updater.py')
-    sys.exit(0)
 
 def pp():
     print """
@@ -271,11 +270,11 @@ def main():
             elif choice == '2':
                 exe2pyc()
             elif choice == '3':
-                pyc2py()
-	    elif choice == 'U':
-		updater()		
-	    elif choice == 'u':
+                pyc2py()	
+	    elif choice.upper() == 'UPDATE':
 		updater()
+	    elif choice.upper() == 'U':
+		updater()		
             else:
 	 	clear()
 		print 'Invalid Option'
