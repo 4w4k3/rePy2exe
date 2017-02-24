@@ -2,7 +2,7 @@
 
 Reverse Engineering Tool for py2exe applications. 
 
-
+Twitter: @4w4k3Official
 ### Prerequisites
 
 * Linux
@@ -29,7 +29,7 @@ python2.7 rePy2exe.py
 
 ## Authors
 
-* **Alisson Moretto** - *Coder* - [4w4k3](https://github.com/4w4k3)
+* **Alisson Moretto** - *Coder* - [4w4k3](https://github.com/4w4k3) 
 
 ## Reference
 
