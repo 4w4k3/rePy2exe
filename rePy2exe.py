@@ -27,7 +27,7 @@ def heading():
     '\n' + 'by: {0}Alisson Moretto ({1}4w4k3{2})'.format(
         YELLOW, RED, YELLOW, BLUE).center(140) + 
     '\n' + '{0}4w4k3@protonmail.com'.format(
-        BLUE).center(140) + '\n' + 'Version: {0}0.3{1}\n'.format(YELLOW, END).center(145))
+        BLUE).center(140) + '\n' + 'Version: {0}0.4{1}\n'.format(YELLOW, END).center(145))
 
 def optionBanner():
     print('\nChoose option from menu:\n')
@@ -200,6 +200,7 @@ def main():
 			print ' '
 			print ' '
 			print '   Please install it :     https://cmake.org      '
+			print '  -> apt-get install cmake -y'
 			sys.exit(0)
 		else:
 			print "OK"
